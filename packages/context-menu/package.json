@@ -1,0 +1,41 @@
+{
+  "name": "@zhouchengfeng/wuhu-react-ui-context-menu",
+  "version": "0.0.1",
+  "description": "context-menu components for wuhu-react-ui",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wuhu-react-ui-context-menu",
+    "context-menu",
+    "context-menu components"
+  ],
+  "author": "zchengfeng <2684837299@qq.com>",
+  "funding": "https://github.com/sponsors/yibird",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.1",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.2.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

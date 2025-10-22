@@ -1,0 +1,72 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite"],
+  "files": {
+    "includes": ["**", "!**/dist", "!**/node_modules", "!**/scripts"]
+  },
+  // js配置
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+
+  // lint配置
+  "linter": {
+    "rules": {
+      "performance": {
+        "noBarrelFile": "off"
+      },
+      "style": {
+        "noMagicNumbers": "off",
+        "useBlockStatements": "off",
+        "noNestedTernary": "off",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["kebab-case", "PascalCase", "camelCase"]
+          }
+        }
+      },
+      "suspicious": {
+        "noConsole": "off",
+        "noAssignInExpressions": "off"
+      },
+      "complexity": {
+        "noBannedTypes": "off",
+        "noExcessiveCognitiveComplexity": "off"
+      },
+      "nursery": {
+        "useSortedClasses": "off",
+        "useConsistentTypeDefinitions": "off",
+        "useConsistentArrowReturn": "off",
+        "noShadow": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      },
+      "a11y": {
+        "noNoninteractiveElementInteractions": "off",
+        "useKeyWithClickEvents": "off",
+        "noStaticElementInteractions": "off"
+      }
+    }
+  },
+
+  // 格式化配置
+  "formatter": {
+    // 是否应使用 .editorconfig 文件来确定格式选项
+    "useEditorconfig": true
+  },
+
+  // 分析配置
+  "assist": {
+    "actions": {
+      "source": {
+        // 关闭自动导入排序
+        "organizeImports": "off",
+        "useSortedAttributes": "off"
+      }
+    }
+  }
+}

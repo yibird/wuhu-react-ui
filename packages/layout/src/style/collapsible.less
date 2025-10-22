@@ -1,0 +1,129 @@
+@import './variable.less';
+
+.@{prefix}-collapsible {
+  position: absolute;
+  z-index: 100;
+  display: inline-block;
+
+  &-direction__top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .@{prefix}-collapsible-bar {
+      transform: translateY(-50%);
+
+      &__content-icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &-direction__top-collapsed {
+    .@{prefix}-collapsible-bar {
+      transform: none;
+
+      &__content-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-direction__bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .@{prefix}-collapsible-bar {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &-direction__bottom-collapsed {
+    .@{prefix}-collapsible-bar {
+      transform: none;
+
+      &__content-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-direction__left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    .@{prefix}-collapsible-bar {
+      transform: translate(-50%, -50%);
+
+      &__content-icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-direction__left-collapsed {
+    .@{prefix}-collapsible-bar {
+      transform: translateY(-50%);
+
+      &__content-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-direction__right {
+    top: 50%;
+    right: 0;
+
+    .@{prefix}-collapsible-bar {
+      transform: translate(-50%, -50%);
+
+      &__content-icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-direction__right-collapsed {
+    .@{prefix}-collapsible-bar {
+      transform: translate(-50%, -50%);
+
+      &__content-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-bar {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+
+    &__content {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: @w-layout-collapsible-bar-w;
+      height: @w-layout-collapsible-bar-h;
+      color: @w-layout-collapsible-bar-color;
+      background-color: @w-layout-collapsible-bar-bg;
+      border-radius: 100%;
+      box-shadow: @w-layout-collapsible-bar-shadow;
+
+      &:hover &-icon {
+        color: @w-layout-collapsible-bar-icon-hover-color;
+      }
+
+      &-icon {
+        width: @w-layout-collapsible-bar-icon-w;
+        height: @w-layout-collapsible-bar-icon-h;
+        color: @w-layout-collapsible-bar-icon-color;
+        transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+}

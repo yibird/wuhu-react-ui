@@ -1,0 +1,29 @@
+{
+  "name": "@zhouchengfeng/wuhu-react-ui-docs",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.93.2",
+    "vitepress": "^1.6.4",
+    "vitepress-demo-plugin": "^1.5.0",
+    "@vitejs/plugin-react": "^5.0.4"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vitepress-plugin-group-icons": "^1.6.3",
+    "@zhouchengfeng/wuhu-react-ui-copy": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-layout": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-context-menu": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-highlight": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-lazy-view": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-resize-observer": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-ripple": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-scrollbar": "workspace:*",
+    "@zhouchengfeng/wuhu-react-ui-time": "workspace:*"
+  },
+  "private": true
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+coverage/
+*.js
+*.jsx
+*.ts
+*.tsx
+*.json
+*.md
+*.html
+public/

@@ -1,0 +1,96 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+.pnpm-store/
+.pnpm-debug.log
+.pnp.*
+.package-lock.json
+yarn.lock
+.pnp.cjs
+.pnp.data.json
+
+# Dist / build outputs
+dist/
+build/
+out/
+.umi/
+.temp/
+coverage/
+*.tsbuildinfo
+
+# Vite cache
+vite.config.ts.timestamp-*
+vite.config.mjs.timestamp-*
+.vite/
+.vite-cache/
+vite-plugin-*
+
+# TypeScript
+tsconfig.tsbuildinfo
+*.d.ts.map
+
+# Editor & system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Test coverage
+coverage/
+*.lcov
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# lock files (可选：如果统一使用 pnpm)
+package-lock.json
+yarn.lock
+
+# --------------------------------------
+# Packages
+# --------------------------------------
+# 忽略所有子包的构建产物
+packages/*/dist/
+packages/*/build/
+packages/*/.vite/
+packages/*/node_modules/
+packages/*/coverage/
+packages/*/tsconfig.tsbuildinfo
+
+# --------------------------------------
+# Changesets
+# --------------------------------------
+# 自动生成的变更日志文件
+.changeset/cache.json
+
+# --------------------------------------
+# Others
+# --------------------------------------
+# Mac / Windows 系统垃圾文件
+.DS_Store
+ehthumbs.db
+Icon?
+desktop.ini
+
+docs/.vitepress/cache/

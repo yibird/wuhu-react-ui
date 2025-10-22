@@ -1,0 +1,31 @@
+@import './variable.less';
+
+.@{prefix}-sider {
+  position: relative;
+  height: 100%;
+
+  &-auto {
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: margin-right 0.25s cubic-bezier(0.4, 0, 0.2, 1), grid-template-columns 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &-collapsed {
+      grid-template-columns: 0fr;
+    }
+  }
+
+  &-fixed {
+    transition: margin-right 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      min-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &__content {
+      height: 100%;
+    }
+  }
+}
